@@ -2,8 +2,12 @@ package com.project.library.dto;
 
 import com.project.library.entity.Address;
 import com.project.library.entity.Book;
+import com.project.library.validator.OnlyLetters;
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Getter
@@ -14,7 +18,16 @@ import java.util.List;
 public class LibraryDto {
 
     private int libraryId;
+
+    @NotNull
+    @NotEmpty
+    @NotBlank
+    @OnlyLetters
     private String name;
-    private Address address;
+
+    @NotNull
+    private int addressId;
+
+
     private List<Book> bookList;
 }

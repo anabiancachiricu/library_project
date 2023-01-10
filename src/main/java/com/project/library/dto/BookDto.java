@@ -41,6 +41,9 @@ public class BookDto {
     @Min(value = 0, message = Constants.QUANITITY_GREATER_THAN_0)
     private int bookDetailsId;
 
+    @NotNull
+    private int libraryId;
+
 
 
 }

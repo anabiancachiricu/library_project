@@ -10,4 +10,5 @@ import java.util.List;
 public interface AddressRepository extends JpaRepository<Address, Long> {
 
     List<Address> findByCity(String city);
+    Address findByAddressId(int id);
 }

@@ -27,8 +27,6 @@ public class AddressDto {
     private String street;
 
     @NotNull(message = Constants.NUMBER_NOT_NULL_VALIDATION)
-    @NotBlank
-    @NotEmpty
     private int number;
 
 }

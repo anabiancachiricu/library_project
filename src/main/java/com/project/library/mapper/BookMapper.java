@@ -5,17 +5,21 @@ import com.project.library.entity.Author;
 import com.project.library.entity.Book;
 import com.project.library.repository.AuthorRepository;
 import com.project.library.repository.BookDetailsRepository;
+import com.project.library.repository.LibraryRepository;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BookMapper implements GenericMapper<Book, BookDto> {
     private final AuthorRepository authorRepository;
     private final BookDetailsRepository bookDetailsRepository;
+    private final LibraryRepository libraryRepository;
 
     public BookMapper(AuthorRepository authorRepository,
-                      BookDetailsRepository bookDetailsRepository) {
+                      BookDetailsRepository bookDetailsRepository,
+                      LibraryRepository libraryRepository) {
         this.authorRepository = authorRepository;
         this.bookDetailsRepository = bookDetailsRepository;
+        this.libraryRepository = libraryRepository;
     }
 
     public Book mapToClass(BookDto bookDto) {
