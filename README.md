@@ -1,4 +1,4 @@
-# library
+# Library
  Spring project for a library
 
 As a user, I want to add a new book with existing authors and details.
